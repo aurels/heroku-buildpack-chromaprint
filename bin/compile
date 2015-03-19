@@ -15,7 +15,7 @@ mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
 curl -L --silent $DOWNLOAD_URL | tar xz
 cd $DOWNLOADED_DIR
-echo "adding fpcalc to PATH" | indent
+echo "Adding fpcalc to PATH" | indent
 PROFILE_PATH="$BUILD_DIR/.profile.d/fpcalc.sh"
 mkdir -p $(dirname $PROFILE_PATH)
 echo 'export PATH="$PATH:vendor/'+$DOWNLOADED_DIR+'"' >> $PROFILE_PATH
