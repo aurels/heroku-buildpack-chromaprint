@@ -9,5 +9,8 @@ cd $BUILD_DIR
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
 curl -L --silent $DOWNLOAD_URL | tar xz
-cd chromaprint-fpcalc*
-ls
+cd chromaprint-fpcalc-1.1-linux-x86_64
+echo "adding fpcalc to PATH"
+PROFILE_PATH="$BUILD_DIR/.profile.d/fpcalc"
+mkdir -p $(dirname $PROFILE_PATH)
+echo 'export PATH="$PATH:vendor/chromaprint-fpcalc-1.1-linux-x86_64"' >> $PROFILE_PATH
