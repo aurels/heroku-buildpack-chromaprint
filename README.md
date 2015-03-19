@@ -16,6 +16,15 @@ Use `heroku-buildpack-multi` in order to have multiple buildpacks applied.
 
     $ git push heroku master
 
+You should see something like this in the output :
+
+    remote: -----> Fetching custom git buildpack... done
+    remote: -----> Multipack app detected
+    remote: =====> Downloading Buildpack: https://github.com/aurels/heroku-buildpack-chromaprint
+    remote: =====> Detected Framework: Chromaprint
+    remote:        Adding fpcalc to PATH
+    remote: =====> Downloading Buildpack
+
 To check if it has been applied :
 
     $ heroku run fpcalc -version
