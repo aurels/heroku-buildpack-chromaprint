@@ -1,6 +1,12 @@
 # heroku-buildpack-chromaprint
 
-Install :
+## About
+
+Buildpack to run [Chromaprint](https://acoustid.org/chromaprint) on [Heroku](https://heroku.com).
+
+## Installation
+
+Use `heroku-buildpack-multi` in order to have multiple buildpacks applied.
 
     $ heroku create my-app --buildpack https://github.com/ddollar/heroku-buildpack-multi
 
@@ -10,7 +16,6 @@ Install :
 
     $ git push heroku master
 
-
-Check if it's OK :
+To check if it has been applied :
 
     $ heroku run vendor/chromaprint-fpcalc-1.1-linux-x86_64/fpcalc -version
